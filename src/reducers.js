@@ -1,3 +1,4 @@
+//associate the reducers in a single reducer called teamApp
 import { combineReducers } from "redux";
 
 import {
@@ -7,6 +8,7 @@ import {
   DELETE_PLAYER
 } from "./actions";
 
+//reducer associated with the value of the position of the state
 function position(state = 0, action) {
   switch (action.type) {
     case CHANGE_POSITION:
@@ -16,6 +18,7 @@ function position(state = 0, action) {
   }
 }
 
+//reducer associated with the value of the coach of the state
 function coach(state = "", action) {
   switch (action.type) {
     case CHANGE_COACH:
@@ -25,6 +28,7 @@ function coach(state = "", action) {
   }
 }
 
+//reducer associated with the value of the array players[] of the state
 function players(state = [], action) {
   switch (action.type) {
     case ADD_PLAYER:
@@ -46,6 +50,7 @@ function players(state = [], action) {
   }
 }
 
+////teamApp is passed as a parameter in the 'let store = createStore(teamApp);'
 const teamApp = combineReducers({
   position,
   coach,

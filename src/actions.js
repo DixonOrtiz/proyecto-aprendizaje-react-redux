@@ -4,6 +4,7 @@ export const CHANGE_COACH = "CHANGE_COACH";
 export const ADD_PLAYER = "ADD_PLAYER";
 export const DELETE_PLAYER = "DELETE_PLAYER";
 
+//action creators, are passed as a parameter in the reducers
 export function changePosition(position) {
   return { type: CHANGE_POSITION, position };
 }
